@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário de Opinião</title>
+	<script src="form.js"></script>
+</head>
+<body>
+	<h1>Formulário de Opinião</h1>
+	<form>
+		<label for="idade">Idade:</label>
+		<input type="number" id="idade" name="idade"><br>
+
+		<label for="sexo">Sexo:</label>
+		<input type="radio" id="sexo-m" name="sexo" value="masculino">
+		<label for="sexo-m">Masculino</label>
+		<input type="radio" id="sexo-f" name="sexo" value="feminino">
+		<label for="sexo-f">Feminino</label><br>
+
+		<label for="opiniao">Opinião:</label>
+		<select id="opiniao" name="opiniao">
+			<option value="1">Péssimo</option>
+			<option value="2">Regular</option>
+			<option value="3">Bom</option>
+			<option value="4">Ótimo</option>
+		</select><br>
+
+        <input type="button" value="Enviar" onclick="adicionarOpiniao()">
+        <button id="preencher-aleatorio" type="button" onclick="preencherFormularioAleatorio()">Preencher aleatoriamente</button>
+        <span id="contador"></span>
+	</form>
+
+	<h2>Opiniões Coletadas:</h2>
+    <ul id="lista-opinioes"></ul>
+    <h2>Resultados:</h2>
+    <div id="resultados"></div>
+</body>
+</html>
