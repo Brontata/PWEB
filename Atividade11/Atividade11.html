@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            function Retangulo(x, y){
+                this.x = x;
+                this.y = y;
+
+                this.area=function(){
+                    return x * y;
+                }
+
+            }
+
+            var retangulo = new Retangulo(3, 4);
+
+            alert("Area do retangulo: " + retangulo.area());
+
+            function Conta(){
+                var nomeCorrentista;
+                var banco;
+                var numeroConta;
+                var saldo;
+
+
+                this.getNomeCorrentista = function(){
+                    return this.nomeCorrentista;
+                }
+
+                this.setNomeCorrentista = function(value){
+                    this.nomeCorrentista = value;
+                }
+
+                this.getBanco = function(){
+                    return this.banco;
+                }
+
+                this.setBanco = function(value){
+                    this.banco = value;
+                }
+
+                this.getNumeroConta = function(){
+                    return this.numeroConta;
+                }
+
+                this.setNumeroConta = function(value){
+                    this.numeroConta = value;
+                }
+
+                this.getSaldo = function(){
+                    return this.saldo;
+                }
+
+                this.setSaldo = function(value){
+                    this.saldo = value;
+                }
+            }
+
+            function Corrente(){
+                var saldoEspecial;
+
+                this.getSaldoEspecial = function(){
+                    return this.saldoEspecial;
+                }
+
+                this.setSaldoEspecial = function(value){
+                    this.saldoEspecial = value;
+                }
+            }
+
+            function Poupanca(){
+                var juros;
+
+                this.getJuros = function(){
+                    return this.juros;
+                }
+
+                this.setJuros = function(value){
+                    this.juros = value;
+                }
+            }
+        
+            Corrente.prototype = new Conta();
+            Poupanca.prototype = new Conta();
+        
+            var contaCorrente = new Corrente();
+
+            contaCorrente.setNomeCorrentista("Guilherme Correntista");
+            contaCorrente.setBanco("GuiBank");
+            contaCorrente.setNumeroConta("258");
+            contaCorrente.setSaldo(999999999.99);
+            contaCorrente.setSaldoEspecial(10000000000.00);
+
+            alert(JSON.stringify(contaCorrente))
+
+            var contaPoupanca = new Poupanca();
+
+            contaPoupanca.setNomeCorrentista("Guilherme Poupançudo");
+            contaPoupanca.setBanco("Guinter");
+            contaPoupanca.setNumeroConta("299");
+            contaPoupanca.setSaldo(8999999999.99);
+            contaPoupanca.setJuros(810000000000.00);
+
+            alert(JSON.stringify(contaPoupanca))
+        
+        </script>
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>
