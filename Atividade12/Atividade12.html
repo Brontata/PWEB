@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <img id='imagem' onmouseover="aberta()" onmouseout="fechada()" onclick="quebrada()" width="600" height="500" src="https://st.depositphotos.com/1763191/4222/v/950/depositphotos_42229315-stock-illustration-a-closed-window-with-light.jpg" onmouseover=hover(this); onmouseout=leave(this);/>
+        <script>
+
+            //function sleep(ms) {
+            //    return new Promise(resolve => setTimeout(resolve, ms));
+            //}
+
+            function fechada() {
+                document.getElementById("imagem").src = "https://st.depositphotos.com/1763191/4222/v/950/depositphotos_42229315-stock-illustration-a-closed-window-with-light.jpg"
+                document.getElementById("imagem").alt="fechada";
+                }
+
+            function aberta() {
+                document.getElementById("imagem").src = "https://img.freepik.com/fotos-premium/janela-com-vista-para-a-paisagem-janela-aberta-para-o-jardim-generative-aixa_174954-364.jpg"
+                document.getElementById("imagem").alt="aberta";
+                }
+            
+            function quebrada() {
+                document.getElementById("imagem").src = "https://media.gazetadopovo.com.br/2019/10/30161107/glass-1497229-960x540.jpg";
+                document.getElementById("imagem").alt="quebrada";
+                //await sleep(3000);
+            }
+            
+
+        </script>
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>
