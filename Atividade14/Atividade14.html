@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+                var outputMessage = ""
+
+                function validateForm() {
+                    let nome = document.forms["pesquisa"]["nome"].value;
+                    if (nome.length < 10) {
+                        alert("O nome deve conter 10 ou mais caracteres");
+                        return false;
+                    }
+
+                    let email = document.forms["pesquisa"]["email"].value;
+                    if (!email.includes("@")) {
+                        alert("Deve conter um email válido!");
+                        return false;
+                    }
+
+                    let comentario = document.forms["pesquisa"]["comentario"].value;
+                    if (comentario.length < 20) {
+                        alert("O comentario deve conter 20 ou mais caracteres");
+                        return false;
+                    }
+                
+                    if(document.getElementById('sim').checked) {
+                        alert("Volte sempre à esta página!");
+                    }else if(document.getElementById('nao').checked) {
+                        alert("Que bom que você voltou a visitar esta página!");
+                    }
+                }
+    
+        </script>
+    </head>
+    <body>
+        <h1>Formulário Pesquisa</h1>
+        <form name="pesquisa" onsubmit="return validateForm()" method="POST">
+            Nome:
+            <input type="text" name="nome" id="nome" minlength="10">
+            <br>
+            <br>
+            Email: 
+            <input type="text" name="email" id="email" size="40">
+            <br>
+            <br>
+            Comentário: 
+            <br>
+            <textarea id="comentario" name="comentario" rows="5" cols="41"></textarea>
+            
+            <h2>Pesquisa:</h2>
+            Primeira vez na página?
+            <br>
+            <br>
+            <input type="radio" id="sim" name="textInput" value="primeiravez">
+            <label for="sim">Sim</label>
+            <input type="radio" id="nao" name="textInput" value="primeiravez">
+            <label for="nao">Não</label>
+
+            <br><br><br>
+            <button type="submit">Enviar</button> <button type="reset">Limpar</button> 
+        </form>
+        
+        
+        
+    </body>
+</html>
