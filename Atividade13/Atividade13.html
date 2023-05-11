@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+                function maiusc() {
+                    document.getElementById("texto").value = 
+                    document.getElementById("texto").value.toUpperCase();
+                    }
+    
+                function minusc() {
+                    document.getElementById("texto").value = 
+                    document.getElementById("texto").value.toLowerCase();
+                    }
+        </script>
+    </head>
+    <body>
+        <form name="teste">
+            Texto
+            <input type="text" name="texto" id="texto" size="20" maxlength="20">
+            <br>
+            <br>
+            <input type="radio" id="maiusculas" name="textInput" value="maiusculas" onclick="maiusc()">
+            <label for="maiusculas">MAIÚSCULAS</label>
+            <br>
+            <input type="radio" id="minusculas" name="textInput" value="minusculas" onclick="minusc()">
+            <label for="minusculas">minusculas</label>
+    
+
+        </form>
+        
+        
+        
+    </body>
+</html>
