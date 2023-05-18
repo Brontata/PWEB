@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página do Curso</title>
+</head>
+<body>
+    <h1>Detalhes do Curso</h1>
+    <p id="nome-curso"></p>
+
+    <script>
+        // Recuperar o parâmetro 'curso' da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nomeCurso = urlParams.get('curso');
+
+        // Exibir o nome do curso na página
+        const nomeCursoElement = document.getElementById('nome-curso');
+        nomeCursoElement.textContent = "Nome do Curso: " + nomeCurso;
+    </script>
+</body>
+</html>

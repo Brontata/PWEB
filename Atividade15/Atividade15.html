@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selecione um curso</title>
+</head>
+<body>
+    <h1>Selecione um curso da Fatec Sorocaba:</h1>
+    <select id="cursos" onchange="confirmarCurso()">
+        <option value="" selected disabled hidden>Escolha um curso</option>
+        <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+        <option value="EA">Eletrônica Automotiva</option>
+        <option value="FM">Fabricação Mecânica</option>
+        <option value="GE">Gestão Empresarial</option>
+        <option value="GQ">Gestão da Qualidade</option>
+        <option value="LOG">Logística</option>
+        <option value="MA">Manufatura Avançada</option>
+        <option value="PM">Processos Metalúrgicos</option>
+        <option value="POL">Polímeros</option>
+        <option value="PM">Projetos Mecânicos</option>
+        <option value="SB">Sistemas Biomédicos</option>
+    </select>
+
+    <script>
+        function confirmarCurso() {
+            var selectElement = document.getElementById("cursos");
+            var selectedIndex = selectElement.selectedIndex;
+            var cursoSelecionado = selectElement.options[selectedIndex].text;
+
+            if (cursoSelecionado !== "") {
+                var confirmacao = confirm("Deseja abrir a janela do curso selecionado?");
+                if (confirmacao) {
+                    var url = "Curso.html?curso=" + encodeURIComponent(cursoSelecionado);
+                    window.open(url, "_blank", "width=600,height=300");
+                }
+            } else {
+                alert("Por favor, selecione um curso.");
+            }
+        }
+    </script>
+</body>
+</html>
